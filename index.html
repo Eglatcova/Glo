@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
@@ -27,7 +28,6 @@
           <button class="button contacts__button button--primary " data-toggle="modal">Заказать звонок</button>
         </div>
       </div>
-      <!-- /.menu -->
     </div>
   </header>
   <main>
@@ -46,6 +46,101 @@
       </div>
       <a href="#" class="hero__scroll-down">листайте вниз</a>
     </section>
+
+
+    <section class="section projects section--dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-50">
+            <div class="section-title section-title--left">
+              <h2 class="section-title__heading section-title__heading--primary">Завершенные <span
+                  class="section-title__word">проекты</span></h2>
+              <p class="section-title__text project__text">На сайте представлена ​​лишь небольшая часть работ,
+                выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
+            </div>
+            <div class="swiper-container swiper-no-swiping">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-slide__text">
+                    <h3 class="swiper-slide__heading">Город:</h3>
+                    <span class="swiper-slide__value">Ростов-на-Дону<br>ЖК Адмирал</span>
+                  </div>
+                  <div class="swiper-slide__text">
+                    <h3 class="swiper-slide__heading">Площадь:</h3>
+                    <span class="swiper-slide__value">81 м<sup>2</sup></span>
+                  </div>
+                  <div class="swiper-slide__text">
+                    <h3 class="swiper-slide__heading">Срок ремонта:</h3>
+                    <span class="swiper-slide__value">3,5 месяца</span>
+                  </div>
+                  <div class="swiper-slide__text">
+                    <h3 class="swiper-slide__heading">Стоимость:</h3>
+                    <span class="swiper-slide__value">По запросу</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__text">
+                    <h3 class="swiper-slide__heading">Город:</h3>
+                    <span class="swiper-slide__value">Ростов-на-Дону<br>ЖК Адмирал</span>
+                  </div>
+                  <div class="swiper-slide__text">
+                    <h3 class="swiper-slide__heading">Площадь:</h3>
+                    <span class="swiper-slide__value">81 м<sup>2</sup></span>
+                  </div>
+                  <div class="swiper-slide__text">
+                    <h3 class="swiper-slide__heading">Срок ремонта:</h3>
+                    <span class="swiper-slide__value">3,5 месяца</span>
+                  </div>
+                  <div class="swiper-slide__text">
+                    <h3 class="swiper-slide__heading">Стоимость:</h3>
+                    <span class="swiper-slide__value">По запросу</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__text">
+                    <h3 class="swiper-slide__heading">Город:</h3>
+                    <span class="swiper-slide__value">Ростов-на-Дону<br>ЖК Адмирал</span>
+                  </div>
+                  <div class="swiper-slide__text">
+                    <h3 class="swiper-slide__heading">Площадь:</h3>
+                    <span class="swiper-slide__value">81 м<sup>2</sup></span>
+                  </div>
+                  <div class="swiper-slide__text">
+                    <h3 class="swiper-slide__heading">Срок ремонта:</h3>
+                    <span class="swiper-slide__value">3,5 месяца</span>
+                  </div>
+                  <div class="swiper-slide__text">
+                    <h3 class="swiper-slide__heading">Стоимость:</h3>
+                    <span class="swiper-slide__value">По запросу</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <div class="col-50">
+            <div class="swiper-container swiper-no-swiping">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="img/project.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/project.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/project.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
     <section class="section control">
       <div class="container">
         <div class="section-title">
@@ -65,7 +160,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col-30">
             <div class="card types__card">
               <img src="img/type-1.jpg" alt="Косметический ремонт" class="card__image">
               <div class="card__text">
@@ -85,7 +180,7 @@
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-30">
             <div class="card types__card">
               <img src="img/type-2.jpg" alt="Капитальный ремонт" class="card__image">
               <div class="card__text">
@@ -105,7 +200,7 @@
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-30">
             <div class="card types__card">
               <img src="img/type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
               <div class="card__text">
@@ -135,13 +230,13 @@
           <div class="section-title__image">
             <img src="img/design.svg" alt="">
           </div>
-          <p class="section-title__text">
+          <p class="section-title__text design__text">
             Дизайн-проект не только помогает сделать ремонт вашей квартиры более современным, но и значительно
             удешевляет материалы и сокращает время ремонтных работ
           </p>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col-30">
             <div class="card design__card">
               <img src="img/design-1.jpg" alt="Минимальный">
               <div class="card__text">
@@ -158,7 +253,7 @@
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-30">
             <div class="card design__card">
               <img src="img/design-2.jpg" alt="Стандартный">
               <div class="card__text">
@@ -178,7 +273,7 @@
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-30">
             <div class="card design__card">
               <img src="img/design-3.jpg" alt="Полный">
               <div class="card__text">
@@ -228,6 +323,7 @@
   </div>
   <a class="scroll-button"></a>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
