@@ -1,16 +1,36 @@
 .swiper2
   width: 100%
+  &-slide
+    &__image
+      display: flex
+      justify-content: flex-end
+      margin-top: 2.4rem
+  &__image
+    width: 100%
 .steps
+  position: absolute
+  margin-left: auto
+  margin-right: auto
+  left: 0
+  right: 0
+  margin-top: -500px 
+  padding-top: 500px
+  z-index: -1
   &__word
     &::after
       margin-left: 6rem
-  &-description
+  &-name
     display: flex
     flex-wrap: wrap
+    margin-top: 7rem
     &__step
       position: relative
       flex-basis: 33%
-      color: rgba($secondary, 0.5)
+      &--visible
+        color: $light
+        flex-basis: 33%
+        &::before
+         display: none
       &::before
         content: ''
         position: absolute
@@ -40,11 +60,6 @@
       font-weight: normal
       font-size: 1.07rem
       line-height: 1.28rem
-.visible
-  color: $light
-  flex-basis: 33%
-  &::before
-      display: none
 .section-title
   &__subheading
     font-family: 'Futura Demi'
@@ -76,5 +91,5 @@
     &--lower
       margin-top: -0.3rem
       width: 21rem
-      margin-bottom: 4.4rem
+      margin-bottom: 5rem
   

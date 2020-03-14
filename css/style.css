@@ -383,7 +383,8 @@ template {
 .container {
   width: 85%;
   max-width: 1256px;
-  margin: auto; }
+  margin: auto;
+  position: relative; }
 
 .row {
   display: flex;
@@ -395,9 +396,17 @@ template {
 
 .col-50 {
   width: 50%; }
-  .col-50__steps--two {
-    display: flex;
-    flex-direction: column; }
+
+.col-65 {
+  width: 62%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 49rem; }
+
+.col-35 {
+  width: 38%;
+  height: 49rem; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -764,52 +773,65 @@ img {
 
 .swiper2 {
   width: 100%; }
+  .swiper2-slide__image {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2.4rem; }
+  .swiper2__image {
+    width: 100%; }
 
-.steps__word::after {
-  margin-left: 6rem; }
-
-.steps-description {
-  display: flex;
-  flex-wrap: wrap; }
-  .steps-description__step {
-    position: relative;
-    flex-basis: 33%;
-    color: rgba(149, 149, 149, 0.5); }
-    .steps-description__step::before {
-      content: '';
-      position: absolute;
-      z-index: 198;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(19, 19, 19, 0.7); }
-  .steps-description__number {
-    position: relative;
-    font-family: 'Yeseva One', cursive;
-    font-weight: normal;
-    font-size: 1.07rem;
-    line-height: 1.5rem;
-    text-transform: uppercase; }
-    .steps-description__number::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 1.14rem;
-      height: 1px;
-      background-color: #E3B873; }
-  .steps-description__phrase {
-    font-family: 'Futura Book';
-    font-weight: normal;
-    font-size: 1.07rem;
-    line-height: 1.28rem; }
-
-.visible {
-  color: #ffffff;
-  flex-basis: 33%; }
-  .visible::before {
-    display: none; }
+.steps {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: -500px;
+  padding-top: 500px;
+  z-index: -1; }
+  .steps__word::after {
+    margin-left: 6rem; }
+  .steps-name {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 7rem; }
+    .steps-name__step {
+      position: relative;
+      flex-basis: 33%; }
+      .steps-name__step--visible {
+        color: #ffffff;
+        flex-basis: 33%; }
+        .steps-name__step--visible::before {
+          display: none; }
+      .steps-name__step::before {
+        content: '';
+        position: absolute;
+        z-index: 198;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(19, 19, 19, 0.7); }
+    .steps-name__number {
+      position: relative;
+      font-family: 'Yeseva One', cursive;
+      font-weight: normal;
+      font-size: 1.07rem;
+      line-height: 1.5rem;
+      text-transform: uppercase; }
+      .steps-name__number::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 1.14rem;
+        height: 1px;
+        background-color: #E3B873; }
+    .steps-name__phrase {
+      font-family: 'Futura Book';
+      font-weight: normal;
+      font-size: 1.07rem;
+      line-height: 1.28rem; }
 
 .section-title__subheading {
   font-family: 'Futura Demi';
@@ -844,7 +866,7 @@ img {
   .steps-slide__value--lower {
     margin-top: -0.3rem;
     width: 21rem;
-    margin-bottom: 4.4rem; }
+    margin-bottom: 5rem; }
 
 @media screen and (max-width: 1200px) {
   html {
