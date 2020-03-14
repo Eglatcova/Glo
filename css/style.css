@@ -845,18 +845,13 @@ img {
   display: flex;
   flex-direction: column; }
 
-.steps-slide__number {
-  display: flex;
-  margin-top: 4.5rem;
-  font-family: 'Yeseva One', cursive;
-  font-size: 1.28rem; }
-
 .steps-slide__heading {
   font-family: Yeseva One;
   font-size: 1.07rem;
   line-height: 1.64rem;
   text-transform: uppercase;
-  color: #E3B873; }
+  color: #E3B873;
+  margin-top: 5rem; }
 
 .steps-slide__value {
   font-family: 'Futura Book';
@@ -867,6 +862,14 @@ img {
     margin-top: -0.3rem;
     width: 21rem;
     margin-bottom: 5rem; }
+
+.pagination3 {
+  top: 0;
+  left: 0;
+  width: auto;
+  margin-top: 2.7rem;
+  font-family: 'Yeseva One', cursive;
+  font-size: 1.28rem; }
 
 @media screen and (max-width: 1200px) {
   html {

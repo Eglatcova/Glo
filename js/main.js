@@ -79,7 +79,7 @@ var swiper = new Swiper('.swiper2', {
     nextEl: '.next2',
     prevEl: '.prev2',
   },
-}); 
+});
 
 
 //слайдер2
