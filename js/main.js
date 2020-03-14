@@ -69,6 +69,19 @@ var bullets = $('.pagination1');
 next.css('left', prev.width() + 10 + bullets.width() + 10)
 bullets.css('left', prev.width() + 10)
 
+//слайдер сечтчик
+var swiper = new Swiper('.swiper2', {
+  pagination: {
+    el: '.pagination3',
+    type: 'fraction',
+  },
+  navigation: {
+    nextEl: '.next2',
+    prevEl: '.prev2',
+  },
+}); 
+
+
 //слайдер2
 var mySwiper = new Swiper('.swiper2', {
   loop: true,
@@ -80,6 +93,7 @@ var mySwiper = new Swiper('.swiper2', {
     nextEl: '.next2',
     prevEl: '.prev2',
   },
+  
   //переключение имени слайдов над картинками. начало
   on: {
     slideChange: function () {
@@ -128,8 +142,10 @@ slideOne .on('click', function () {
 slideTwo .on('click', function () {
   var mySwiper0 = document.querySelectorAll('.swiper2')[0].swiper;
   var mySwiper1 = document.querySelectorAll('.swiper2')[1].swiper;
+  var mySwiper2 = document.querySelectorAll('.swiper2')[1].swiper;
   mySwiper0.slideTo(2, 1000);
   mySwiper1.slideTo(2, 1000);
+  mySwiper2.slideTo(2, 1000);
   
 });
 slideThree .on('click', function () {
