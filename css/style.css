@@ -430,7 +430,7 @@ img {
 .section {
   padding: 60px 0; }
   .section--dark {
-    background-color: #131313;
+    background: #131313 url("../img/bg-lines.svg") no-repeat center;
     color: #ffffff; }
   .section-title {
     text-align: center; }
