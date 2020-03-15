@@ -471,8 +471,7 @@ img {
   top: 0;
   width: 100%;
   z-index: 99;
-  background-color: #131313;
-  padding-top: 5px; }
+  background-color: #131313; }
 
 .menu {
   display: flex;
@@ -510,9 +509,9 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: -105px;
-  padding-top: 127px;
-  background: #131313 url("../img/hero-bg.jpg") no-repeat top/cover;
+  margin-top: -60px;
+  padding-top: 75px;
+  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #ffffff; }
   .hero::before {
@@ -579,7 +578,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 33px;
+  margin-top: 23px;
   background-color: #131313; }
   .instagram__link {
     display: flex;
