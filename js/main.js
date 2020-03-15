@@ -1,17 +1,45 @@
-/*document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const modal = document.querySelector('.modal')
   const modalBtn = document.querySelectorAll('[data-toggle=modal]')
   const closeBtn = document.querySelector('.modal__close')
+
+
   const switchModal = () => {
     modal.classList.toggle('modal--visible');
   }
   modalBtn.forEach(element => {
     element.addEventListener('click', switchModal);
   });
-  closeBtn.addEventListener('click', switchModal)
-});*/
 
-$(document).ready(function () {
+//закрыти при клике вне модального окна
+  closeBtn.addEventListener('click', switchModal)
+  modal.addEventListener('click', (element) => {
+    if (element.target == modal)
+      switchModal();
+  });
+//закрытие при нажатии esc
+  document.onkeydown = function (evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    //console.log(modal.className)
+    if ("key" in evt) {
+      isEscape = (evt.key === "Escape" || evt.key === "Esc");
+    } else {
+      isEscape = (evt.keyCode === 27);
+    }
+    if (isEscape) {
+      if (modal.className == 'modal modal--visible')
+        switchModal();
+    }
+  };
+});
+
+
+
+
+
+
+/*$(document).ready(function () {
   var modal = $('.modal'),
     modalBtn = $('[data-toggle=modal]'),
     closeBtn = $('.modal__close');
@@ -43,10 +71,6 @@ $(document).ready(function () {
       scrollTop: 0
     }, 1500);
   });
-
- 
-
-
 
 
 //слайдер1
@@ -179,7 +203,6 @@ slideSix .on('click', function () {
 //конец
 
 
-
   var next = $('.next2');
   var prev = $('.prev2');
   var bullets = $('.pagination2');
@@ -189,4 +212,4 @@ slideSix .on('click', function () {
 
 
 });
-
+*/
