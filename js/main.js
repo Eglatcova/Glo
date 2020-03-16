@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
   const modal = document.querySelector('.modal')
   const modalBtn = document.querySelectorAll('[data-toggle=modal]')
   const closeBtn = document.querySelector('.modal__close')
@@ -33,13 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 });
+*/
 
 
 
 
 
-
-/*$(document).ready(function () {
+$(document).ready(function () {
   var modal = $('.modal'),
     modalBtn = $('[data-toggle=modal]'),
     closeBtn = $('.modal__close');
@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slideFive = $('.steps-name__step--five');
     slideSix = $('.steps-name__step--six');
     //конец
+    textAnimate = $('.control__text');
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
@@ -211,5 +212,15 @@ slideSix .on('click', function () {
   bullets.css('left', prev.width() + 10)
 
 
+  new WOW().init();
+  //анимация тескта под видео
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1300){  
+      textAnimate.addClass("control--animate");
+      }
+      else{
+      textAnimate.removeClass("control--animate");
+      }
+    });
+
 });
-*/
