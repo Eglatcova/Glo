@@ -221,7 +221,7 @@ $(document).ready(function () {
   });
 
   //Валидация формы
-  /*
+  
   $('.modal__form').validate({
     errorClass: "invalid",
     rules: {
@@ -281,7 +281,7 @@ $(document).ready(function () {
       }
     }
   });
-  */
+
   $('.control__form').validate({
     errorClass: "invalid",
     rules: {
@@ -303,7 +303,7 @@ $(document).ready(function () {
       userPhone: "Заполните поле"
     }
   });
-  
+  /*
   $('.modal__form').validate({
     errorClass: "invalid",
     errorLabelContainer: "#messageBox2",
@@ -376,7 +376,7 @@ $(document).ready(function () {
     }
   });
 
-
+   
   $(".control__form").validate({
     errorClass: "invalid",
     errorLabelContainer: "#messageBox",
@@ -403,7 +403,7 @@ $(document).ready(function () {
     }
   });
 
-
+  */
   //маска для телефона
   $('[type=tel]').mask('+7(000)00-00-000', {
     placeholder: "+7(___)__-__-___"

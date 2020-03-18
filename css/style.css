@@ -410,6 +410,13 @@ input.invalid {
   align-items: center;
   font-size: 1.1rem; }
 
+.messageBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.1rem; }
+
 .container {
   width: 85%;
   max-width: 1256px;
