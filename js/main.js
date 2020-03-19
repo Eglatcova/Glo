@@ -224,6 +224,7 @@ $(document).ready(function () {
   
   $('.modal__form').validate({
     errorClass: "invalid",
+    errorElement:"div",
     rules: {
       // simple rule, converted to {required:true}
       userName: {
@@ -254,6 +255,7 @@ $(document).ready(function () {
   
   $('.footer__form').validate({
     errorClass: "invalid",
+    errorElement:"div",
     rules: {
       // simple rule, converted to {required:true}
       userName: {
@@ -284,6 +286,7 @@ $(document).ready(function () {
 
   $('.control__form').validate({
     errorClass: "invalid",
+    errorElement:"div",
     rules: {
       // simple rule, converted to {required:true}
       userName: {
@@ -303,107 +306,8 @@ $(document).ready(function () {
       userPhone: "Заполните поле"
     }
   });
-  /*
-  $('.modal__form').validate({
-    errorClass: "invalid",
-    errorLabelContainer: "#messageBox2",
-    wrapper: "li",
-    debug: true,
-    submitHandler: function () {
-      alert("Submitted!")
-    },
-    rules: {
-      // simple rule, converted to {required:true}
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: "required",
-      // compound rule
-      userEmail: {
-        required: true,
-        email: true
-      }
-    },
-    messages: {
-      userName: {
-        required: "Заполните поле 'Имя'",
-        minlength: "Имя не короче 2 букв",
-        maxlength: "Имя не длиннее 15 букв"
-      },
-      userPhone: "Заполните поле 'Телефон'",
-      userEmail: {
-        required: "Заполните поле 'Email'",
-        email: "Введите в формате: name@domain.com"
-      }
-    }
-  });
 
-  $('.footer__form').validate({
-    errorClass: "invalid",
-    errorLabelContainer: "#messageBox3",
-    wrapper: "li",
-    debug: true,
-    submitHandler: function () {
-      alert("Submitted!")
-    },
-    rules: {
-      // simple rule, converted to {required:true}
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: "required",
-      // compound rule
-      userEmail: {
-        required: true,
-        email: true
-      }
-    },
-    messages: {
-      userName: {
-        required: "Заполните поле 'Имя'",
-        minlength: "Имя не короче 2 букв",
-        maxlength: "Имя не длиннее 15 букв"
-      },
-      userPhone: "Заполните поле 'Телефон'",
-      userEmail: {
-        required: "Заполните поле 'Email'",
-        email: "Введите в формате: name@domain.com"
-      }
-    }
-  });
 
-   
-  $(".control__form").validate({
-    errorClass: "invalid",
-    errorLabelContainer: "#messageBox",
-    wrapper: "li",
-    debug: true,
-    submitHandler: function () {
-      alert("Submitted!")
-    },
-    rules: {
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: "required"
-    },
-    messages: {
-      userName: {
-        required: "Заполните поле 'Имя'",
-        minlength: "Имя не короче 2 букв",
-        maxlength: "Имя не длиннее 15 букв"
-      },  
-      userPhone: "Заполните поле 'Телефон'"
-    }
-  });
-
-  */
   //маска для телефона
   $('[type=tel]').mask('+7(000)00-00-000', {
     placeholder: "+7(___)__-__-___"
