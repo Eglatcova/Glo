@@ -265,7 +265,7 @@ $(document).ready(function () {
       },
       userPhone: "required",
       // compound rule
-      userEmail: {
+      userQuestion: {
         required: true,
         email: true
       }
@@ -277,9 +277,8 @@ $(document).ready(function () {
         maxlength: "Имя не длиннее 15 букв"
       },
       userPhone: "Заполните поле",
-      userEmail: {
+      userQuestion: {
         required: "Заполните поле",
-        email: "Введите корректный email"
       }
     }
   });
