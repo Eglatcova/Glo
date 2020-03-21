@@ -157,21 +157,22 @@
         <p class="control__text"> На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В
           любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую
           трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
-        <form action="send.php" method="POST" class="form control__form">
+        <form action="#" class="form control__form">
           <div class="messageBox" id="messageBox"></div>
           <div class="control__input-group">
             <div for="user-name" class="label form__label control__label label--dark">Имя</div>
-            <input type="text" name="userName" class="input form__input control__input" id="user-name"
+            <input type="text" name="userName" class="input form__input control__input" id="user-name--control"
               placeholder="Как вас зовут:">
           </div>
           <div class="control__input-group">
             <div for="user-form" class="label form__label control__label label--dark">Телефон</div>
-            <input type="tel" name="userPhone" class="input form__input control__input" id="user-form"
+            <input type="tel" name="userPhone" class="input form__input control__input" id="user-form--control"
               placeholder="Ваш номер телефона:">
           </div>
           <button class="button button--primary control__button">Отправить</button>
           <div class="policy control__policy">
-            <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
+            <input type="checkbox" name="policy-checkbox" id="policy-checkbox--control" class="policy__checkbox"
+              checked>
             <label for="policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
           </div>
         </form>
@@ -336,7 +337,17 @@
               <h2 class="section-title__heading section-title__heading--primary">6 шагов<span
                   class="section-title__word steps__word">до цели</span></h2>
             </div>
-
+            <div class="swiper100">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+              </div>
+              <div class="swiper-pagination pagination3"></div>
+            </div>
             <div class="swiper-container swiper2 swiper-no-swiping">
               <div class="swiper-pagination pagination3"></div>
               <div class="swiper-wrapper">
@@ -360,9 +371,9 @@
                 <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
               </div>
-              <div class="swiper-button-prev prev2"></div>
+              <div class="swiper-button-prev prev2 prev100"></div>
               <div class="swiper-pagination pagination2"></div>
-              <div class="swiper-button-next next2"></div>
+              <div class="swiper-button-next next2 next100"></div>
             </div>
           </div>
           <div class="col-65 wow fadeInRight" data-wow-offset="200">
@@ -607,21 +618,21 @@
           <div class="messageBox3" id="messageBox3"></div>
           <div class="input-group footer__input-group">
             <div for="user-name" class="label form__label label--light">Имя</div>
-            <input type="text" name="userName" class="input form__input footer__input input--light" id="user-name"
-              placeholder="Как вас зовут:">
+            <input type="text" name="userName" class="input form__input footer__input input--light"
+              id="user-name--footer" placeholder="Как вас зовут:">
           </div>
           <div class="input-group footer__input-group">
             <div for="user-form" class="label form__label label--light">Телефон</div>
-            <input type="tel" name="userPhone" class="input form__input footer__input input--light" id="user-form"
-              placeholder="Ваш номер телефона:">
+            <input type="tel" name="userPhone" class="input form__input footer__input input--light"
+              id="user-form--footer" placeholder="Ваш номер телефона:">
           </div>
           <div class="input-group footer__input-group footer__input-group--full-width">
             <div for="user-question" class="label form__label label--light">Вопрос</div>
-            <input type="text" name="userQuestion" class="input form__input footer__input--question input--light" id="user-question"
-              placeholder="Я хочу спросить">
+            <input type="text" name="userText" class="input form__input footer__input--question input--light"
+              id="user-question" placeholder="Я хочу спросить">
           </div>
           <div class="policy footer__policy">
-            <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
+            <input type="checkbox" name="policy-checkbox" id="policy-checkbox--footer" class="policy__checkbox" checked>
             <div for="policy-checkbox" class="policy__label policy__label--center">я соглашаюсь с обработкой
               данных</div>
           </div>
@@ -667,28 +678,34 @@
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
-      <form action="send.php" method="POST" dialog="form modal__form">
+      <form action="send.php" method="POST" class="form modal__form">
         <div class="input-group modal__input-group">
-          <div for="user-name" class="label form__label label--light" >Имя</div>
-          <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name"
+          <div for="user-name" class="label form__label label--light">Имя</div>
+          <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name-modal"
             placeholder="Как вас зовут:">
         </div>
         <div class="input-group modal__input-group">
           <div for="user-form" class="label form__label label--light">Телефон</div>
-          <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-form"
+          <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-form-modal"
             placeholder="Ваш номер телефона:">
         </div>
         <div class="input-group modal__input-group">
           <div for="user-email" class="label form__label label--light">Email</div>
-          <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email"
+          <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email-modal"
             placeholder="Ваш email:">
         </div>
         <div class="policy modal__policy">
-          <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
+          <input type="checkbox" name="policy-checkbox" id="policy-checkbox--modal" class="policy__checkbox" checked>
           <label for="policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
         </div>
         <button class="button button--primary modal__button">Отправить заявку</button>
       </form>
+    </div>
+  </div>
+  <div class="success">
+    <div class="success__dialog">
+      <button class="success__close"></button>
+      <h3 class="modal__title">Заявка успешно отправлена</h3>
     </div>
   </div>
   <a class="scroll-button"></a>

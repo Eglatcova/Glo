@@ -38,8 +38,10 @@
 
 $(document).ready(function () {
   var modal = $('.modal'),
+      success = $('.success')
     modalBtn = $('[data-toggle=modal]'),
     closeBtn = $('.modal__close');
+    closeScc = $('.success__close');
   scrollBtn = $('.scroll-button');
   //переменные названий(имен) для слайдов "6 шагов до цели". начало
   slideOne = $('.steps-name__step--one');
@@ -93,17 +95,17 @@ $(document).ready(function () {
   bullets.css('left', prev.width() + 10)
 
   //слайдер сечтчик
-  var swiper = new Swiper('.swiper2', {
+  var Myswiperk = new Swiper('.swiper100', {
     pagination: {
+      loop: true,
       el: '.pagination3',
       type: 'fraction',
     },
     navigation: {
-      nextEl: '.next2',
-      prevEl: '.prev2',
+      nextEl: '.next100',
+      prevEl: '.prev100',
     },
   });
-
 
   //слайдер2
   var mySwiper = new Swiper('.swiper2', {
@@ -155,49 +157,46 @@ $(document).ready(function () {
     //конец
   });
   //переключение слайдов при нажатии на шаги.начало
+  var mySwiper0 = document.querySelectorAll('.swiper2')[0].swiper;
+  var mySwiper1 = document.querySelectorAll('.swiper2')[1].swiper;
+  var swipe3 = document.querySelectorAll('.swiper100')[0].swiper
+  
   slideOne.on('click', function () {
-    var mySwiper0 = document.querySelectorAll('.swiper2')[0].swiper;
-    var mySwiper1 = document.querySelectorAll('.swiper2')[1].swiper;
     mySwiper0.slideTo(1, 1000);
     mySwiper1.slideTo(1, 1000);
+    swipe3.slideTo(0,1000);
 
   });
   slideTwo.on('click', function () {
-    var mySwiper0 = document.querySelectorAll('.swiper2')[0].swiper;
-    var mySwiper1 = document.querySelectorAll('.swiper2')[1].swiper;
-    var mySwiper2 = document.querySelectorAll('.swiper2')[1].swiper;
+    
     mySwiper0.slideTo(2, 1000);
     mySwiper1.slideTo(2, 1000);
-    mySwiper2.slideTo(2, 1000);
+    swipe3.slideTo(1,1000);
 
   });
   slideThree.on('click', function () {
-    var mySwiper0 = document.querySelectorAll('.swiper2')[0].swiper;
-    var mySwiper1 = document.querySelectorAll('.swiper2')[1].swiper;
+    
     mySwiper0.slideTo(3, 1000);
     mySwiper1.slideTo(3, 1000);
-
+    swipe3.slideTo(2,1000);
   });
   slideFour.on('click', function () {
-    var mySwiper0 = document.querySelectorAll('.swiper2')[0].swiper;
-    var mySwiper1 = document.querySelectorAll('.swiper2')[1].swiper;
+
     mySwiper0.slideTo(4, 1000);
     mySwiper1.slideTo(4, 1000);
-
+    swipe3.slideTo(3,1000);
   });
   slideFive.on('click', function () {
-    var mySwiper0 = document.querySelectorAll('.swiper2')[0].swiper;
-    var mySwiper1 = document.querySelectorAll('.swiper2')[1].swiper;
+
     mySwiper0.slideTo(5, 1000);
     mySwiper1.slideTo(5, 1000);
-
+    swipe3.slideTo(4,1000);
   });
   slideSix.on('click', function () {
-    var mySwiper0 = document.querySelectorAll('.swiper2')[0].swiper;
-    var mySwiper1 = document.querySelectorAll('.swiper2')[1].swiper;
+
     mySwiper0.slideTo(6, 1000);
     mySwiper1.slideTo(6, 1000);
-
+    swipe3.slideTo(5,1000);
   });
   //конец
 
@@ -250,6 +249,21 @@ $(document).ready(function () {
         required: "Заполните поле",
         email: "Введите корректный email"
       }
+    },
+    // 
+    submitHandler: function(form) {  
+      console.log('load ajax')  
+     $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {  
+          console.log('кек. Ответ сервера: ' + response);
+          $(form)[0].reset();
+          modal.removeClass('modal--visible'); 
+          success.toggleClass('success--visible');
+        }
+      });
     }
   });
   
@@ -277,9 +291,23 @@ $(document).ready(function () {
         maxlength: "Имя не длиннее 15 букв"
       },
       userPhone: "Заполните поле",
-      userQuestion: {
+      userText: {
         required: "Заполните поле",
       }
+    },
+    submitHandler: function(form) {  
+      console.log('load ajax')  
+     $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {  
+          console.log('кек. Ответ сервера: ' + response);
+          $(form)[0].reset();
+          modal.removeClass('modal--visible'); 
+          success.toggleClass('success--visible');
+        }
+      });
     }
   });
 
@@ -303,9 +331,25 @@ $(document).ready(function () {
         maxlength: "Имя не длиннее 15 букв"
       },  
       userPhone: "Заполните поле"
+    },
+    submitHandler: function(form) {  
+      console.log('load ajax')  
+     $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {  
+          console.log('кек. Ответ сервера: ' + response);
+          $(form)[0].reset();
+          modal.removeClass('modal--visible'); 
+          success.toggleClass('success--visible');
+        }
+      });
     }
   });
 
+  closeScc.on('click', function () {
+    success.toggleClass('success--visible');});
 
   //маска для телефона
   $('[type=tel]').mask('+7(000)00-00-000', {
@@ -345,6 +389,6 @@ $(document).ready(function () {
 
     myMap.geoObjects
         .add(myPlacemark)
-        .add(myPlacemarkWithContent);
+       // .add(myPlacemarkWithContent);*/
 });
 });
