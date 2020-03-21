@@ -9,13 +9,12 @@
   }
   modalBtn.forEach(element => {
     element.addEventListener('click', switchModal);
-  });
+  });   
 
 //закрыти при клике вне модального окна
   closeBtn.addEventListener('click', switchModal)
   modal.addEventListener('click', (element) => {
-    if (element.target == modal)
-      switchModal();
+    if (element.target == moda l) 
   });
 //закрытие при нажатии esc
   document.onkeydown = function (evt) {
