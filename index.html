@@ -7,10 +7,11 @@
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/map.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=760115ce-606c-4fd9-b224-58b583ce6b74&lang=ru_RU"
+  <!--<script src="https://api-maps.yandex.ru/2.1/?apikey=760115ce-606c-4fd9-b224-58b583ce6b74&lang=ru_RU"
   type="text/javascript">
-  </script>
+  </script>-->
   <title>Document</title>
 </head>
 
@@ -811,9 +812,11 @@
           <img src="img/footer_icon2.png" alt="">
         </div>
       </div>
-      <div class="map footer__map" id="map">
-        <!--
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8084fdfaa54731e6fa7dd282ce13b4f3004055359ef3b81e0da901aa24b63a1f&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=true"></script>-->
+      <div class="map footer__map" id="map"> 
+          <div class="loader loader-default"></div>
+          <div id="map-yandex"></div>
+      <!-- .ymap-container -->
+       <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8084fdfaa54731e6fa7dd282ce13b4f3004055359ef3b81e0da901aa24b63a1f&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=true"></script>-->
       </div>
     </div>
     <div class="footer__menu">
@@ -837,6 +840,7 @@
       </div>
     </div>
   </footer>
+ 
   <div class="modal">
     <div class="modal__sent">
       <button class="modal__close"></button>
@@ -885,6 +889,7 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
+  <script src="js/map.js"></script>
   <script src="js/main.js"></script>
 </body>
 

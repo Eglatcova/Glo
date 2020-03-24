@@ -68,7 +68,17 @@ function fonts(done){
 }
 
 function imgmin(done){
-  src('img/**/**')
+  src('img/**/**.png')
+        .pipe(tinypng({
+            key: '5gHqg6c4tFWRgHT5qwW7VfCJBFB8z4MY',           
+        }))
+        .pipe(dest('dist/img/'));
+  src('img/**/**.jpg')
+        .pipe(tinypng({
+            key: '5gHqg6c4tFWRgHT5qwW7VfCJBFB8z4MY',           
+        }))
+        .pipe(dest('dist/img/'));
+  src('img/**/**.jpeg')
         .pipe(tinypng({
             key: '5gHqg6c4tFWRgHT5qwW7VfCJBFB8z4MY',           
         }))
@@ -83,4 +93,4 @@ exports.serve = bs
 exports.build = series(buildCSS, buildJS,html,php,fonts,imgmin);
 exports.buildCSS = buildCSS;
 exports.buildJS = buildJS;
-exports.html = html;
+exports.imgmin = imgmin;
