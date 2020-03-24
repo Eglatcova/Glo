@@ -1,3 +1,39 @@
+@media screen and ( max-width: 3000px )
+  .fashion-mobile
+    display: none 
+@media screen and ( max-width: 1360px )
+  .measurement
+    &__row
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      margin: auto 
+    &__sale
+      margin-left: -30px
+    &__col
+      &--right
+        flex-basis: 100%
+        display: flex
+        margin: auto
+        margin-top: -50px
+    &__dialog
+      width: 36.36rem
+  .fashion
+    &__image
+      &--one
+        margin-top: -10px
+        left: 40px
+      &--three
+      &--two
+        display: none
+      &--four
+        display: none
+  .col
+    &-69
+      width: 400px
+  .fashion-mobile
+    display: none
+      
 @media screen and ( max-width: 1200px ) 
   html
     font-size: 12px
@@ -7,7 +43,7 @@
   .clients
     &__text
       width: 89%
-      height: 18rem
+      height: 18rem 
 @media screen and ( max-width: 992px )
   .nav
     display: none
@@ -23,6 +59,16 @@
     &__row
       flex-direction: column
       align-items: center
+  .fashion
+    &__image
+      &--one
+        left: 20px
+        top: 100px
+      &--three
+        display: none
+    .col
+      &-69
+        width: 400px
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
@@ -35,7 +81,16 @@
   .card
     &__text
       margin-left: 0
+  .col
+    &-69
+      opacity: 0
+      visibility: hidden
 @media screen and ( max-width: 760px )
+  .measurement
+    &__col
+      &--left
+        margin: auto 
+        margin-left: -400px
   .design
     &__card
       margin-bottom: 4.29rem
@@ -44,6 +99,10 @@
       width: 100%
       height: auto
 @media screen and ( max-width: 576px )
+  html
+    font-size: 10px
+  .measurement
+    display: none
   .contacts
     &__phone
       margin-right: 0
@@ -65,6 +124,126 @@
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem   
+@media screen and ( max-width: 375px )
+  body
+   margin-left: 0rem
+  .container
+    width: 90%
+  .header
+    width: 100%
+  .hero
+    height: 60rem
+    &__content
+      margin: auto
+      max-width: 90%
+    &__title
+      font-size: 2rem
+      line-height: 2.2rem
+    &__button
+      width: 90%
+      margin: auto
+      margin-bottom: 2rem
+  .col-50
+    width: 90%
+  .col-31
+    width: 95%
+  .col-30
+    width: 100%
+  .col
+    &-69
+      opacity: 1
+      visibility: visible
+  .swiper
+    &-button
+      &-prev, &-next
+        background-size: 32px
+  .swiper1 
+    margin-top: 2rem
+  .control
+    background: $dark
+    color: $light
+    &__form
+      background: $dark
+      flex-direction: column
+      align-items: flex-start
+    &__input-group
+      width: 100%
+      margin-top: 2rem
+    &__button
+      position: absolute
+      bottom: -80px
+      width: 90%
+      right: 5%
+      left: 5%
+  .fashion
+    display: none
+  .fashion-mobile
+    display: block
+    height: 500px 
+  .fashion
+    &__title
+      text-align: center
+    &__slide
+      height: 200px
+    &__image
+      &--one
+        margin-left: -20px
+        margin-top: -100px
+  .design
+    background: $black
+    color: $light
+    margin-top: -200px
+    padding-top: 200px
+    &__text
+      max-width: 95%
+      font-size: 1.4rem
+  .steps
+    display: none
+  .team
+    background: $black
+    margin-top: -50px
+    margin-bottom: -200px
+    padding-bottom: 500px
+    &__text
+      display: none
+  .clients
+    display: none
+  .footer
+    margin-top: 100px
+    &__form
+      &-wrap
+        position: relative
+        top: -150px
+    &__input
+      padding-top: 0.3rem
+      width: 100%
+      &-group
+        width: 100%
+    &__button
+      width: 100%
+    &__menu
+      display: none
+    &__contacts
+      background: $black
+      position: absolute
+      z-index: 9999
+      bottom: -60px
+      height: 120px
+      left: 0
+      right: 0
+    &__text 
+      padding-top: 2rem
+    &__icons
+      width: 20%
+  .scroll-button
+    display: none
+  .swiper
+  &-fashion
+    height: 400px
+  .types
+    margin-bottom: -100px
+
+
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down

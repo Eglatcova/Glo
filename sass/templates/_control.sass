@@ -41,12 +41,26 @@
       background-color: $primary
       border-radius: 30px
   &__form
+    position: relative
+    z-index: 99
+    display: flex
+    margin: auto
+    margin-top: -70px
+    flex-wrap: wrap
+    max-width: 55rem
+    align-items: flex-end
+    justify-content: space-between
+    background: $light
+  &__sent
+    position: relative
+    z-index: 90
     display: flex
     margin: auto
     flex-wrap: wrap
     max-width: 55rem
-    justify-content: space-between
-    align-items: flex-end
+    justify-content: center
+    align-items: center
+    text-align: center
   &__input-group
     display: flex
     flex-direction: column

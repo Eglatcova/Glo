@@ -43,6 +43,7 @@ $(document).ready(function () {
     closeBtn = $('.modal__close');
     closeScc = $('.success__close');
   scrollBtn = $('.scroll-button');
+
   //переменные названий(имен) для слайдов "6 шагов до цели". начало
   slideOne = $('.steps-name__step--one');
   slideTwo = $('.steps-name__step--two');
@@ -51,6 +52,21 @@ $(document).ready(function () {
   slideFive = $('.steps-name__step--five');
   slideSix = $('.steps-name__step--six');
   //конец
+  //переменные названий(имен) для слайдов "Cтили". начало
+  fashionOne = $('.fashion__name--one');
+  fashionTwo = $('.fashion__name--two');
+  fashionThree = $('.fashion__name--three');
+  fashionFour = $('.fashion__name--four');
+  fashionFive = $('.fashion__name--five');
+  fashionSix = $('.fashion__name--six');
+  fashionSeven = $('.fashion__name--seven');
+  fashionEight = $('.fashion__name--eight');
+  fashionNine = $('.fashion__name--nine');
+  fashionTen = $('.fashion__name--ten');
+  fashionEleven = $('.fashion__name--eleven');
+
+
+
   textAnimate = $('.control__text');
 
   modalBtn.on('click', function () {
@@ -93,20 +109,84 @@ $(document).ready(function () {
 
   next.css('left', prev.width() + 10 + bullets.width() + 10)
   bullets.css('left', prev.width() + 10)
+  
+  
+ //слайдер стили
+ var Myswiper = new Swiper('.swiper-fashion', {
+  navigation: {
+    nextEl: '.next-fashion',
+    prevEl: '.prev-fashion',
+  },
+  on: {
+    slideChange: function () {
+      //1
+      if (this.realIndex == 0)          
+        fashionOne.addClass('fashion__name--visible');     
+      else
+        fashionOne.removeClass('fashion__name--visible'); 
+      //2
+      if (this.realIndex == 1)
+        fashionTwo.addClass('fashion__name--visible');
+      else
+        fashionTwo.removeClass('fashion__name--visible');
+      //3
+      if (this.realIndex == 2)
+        fashionThree.addClass('fashion__name--visible');
+      else
+        fashionThree.removeClass('fashion__name--visible');
+      //4
+      if (this.realIndex == 3)
+        fashionFour.addClass('fashion__name--visible');
+      else
+        fashionFour.removeClass('fashion__name--visible');
+      //5
+      if (this.realIndex == 4)
+        fashionFive.addClass('fashion__name--visible');
+      else
+        fashionFive.removeClass('fashion__name--visible');
+      //6
+      if (this.realIndex == 5)
+        fashionSix.addClass('fashion__name--visible');
+      else
+        fashionSix.removeClass('fashion__name--visible');
+      //7
+      if (this.realIndex == 6)
+        fashionSeven.addClass('fashion__name--visible');
+      else
+        fashionSeven.removeClass('fashion__name--visible');
+      //8
+      if (this.realIndex == 7)
+        fashionEight.addClass('fashion__name--visible');
+      else
+        fashionEight.removeClass('fashion__name--visible');
+      //9  
+      if (this.realIndex == 8)
+        fashionNine.addClass('fashion__name--visible');
+       else
+        fashionNine.removeClass('fashion__name--visible');
+      //10
+      if (this.realIndex == 9)
+        fashionSix.addClass('fashion__name--visible');
+      else
+        fashionSix.removeClass('fashion__name--visible');
+      //11
+      if (this.realIndex == 10)
+        fashionSix.addClass('fashion__name--visible');
+      else
+        fashionSix.removeClass('fashion__name--visible');
+    },
+  },
+});
 
-  //слайдер сечтчик
+ //слайдер сечтчик
   var Myswiperk = new Swiper('.swiper100', {
     pagination: {
       loop: true,
       el: '.pagination3',
       type: 'fraction',
-    },
-    navigation: {
-      nextEl: '.next100',
-      prevEl: '.prev100',
-    },
+    }
   });
-
+ 
   //слайдер2
   var mySwiper = new Swiper('.swiper2', {
     loop: true,
@@ -122,6 +202,10 @@ $(document).ready(function () {
     //переключение имени слайдов над картинками. начало
     on: {
       slideChange: function () {
+
+        var swipe3 = document.querySelector('.swiper100').swiper;
+        swipe3.slideTo(this.realIndex,1000);
+
         //1
         if (this.realIndex == 0)
           slideOne.addClass('steps-name__step--visible');
@@ -156,49 +240,93 @@ $(document).ready(function () {
     },
     //конец
   });
+  /*
+  var swipe3 = document.querySelector('.swiper100').swiper;
+  swipe3.slideTo(MySwiper.realIndex,1000);*/
   //переключение слайдов при нажатии на шаги.начало
   var mySwiper0 = document.querySelectorAll('.swiper2')[0].swiper;
   var mySwiper1 = document.querySelectorAll('.swiper2')[1].swiper;
-  var swipe3 = document.querySelectorAll('.swiper100')[0].swiper
   
   slideOne.on('click', function () {
     mySwiper0.slideTo(1, 1000);
     mySwiper1.slideTo(1, 1000);
-    swipe3.slideTo(0,1000);
-
   });
   slideTwo.on('click', function () {
     
     mySwiper0.slideTo(2, 1000);
     mySwiper1.slideTo(2, 1000);
-    swipe3.slideTo(1,1000);
-
   });
   slideThree.on('click', function () {
     
     mySwiper0.slideTo(3, 1000);
     mySwiper1.slideTo(3, 1000);
-    swipe3.slideTo(2,1000);
   });
   slideFour.on('click', function () {
 
     mySwiper0.slideTo(4, 1000);
     mySwiper1.slideTo(4, 1000);
-    swipe3.slideTo(3,1000);
   });
   slideFive.on('click', function () {
 
     mySwiper0.slideTo(5, 1000);
     mySwiper1.slideTo(5, 1000);
-    swipe3.slideTo(4,1000);
   });
   slideSix.on('click', function () {
 
     mySwiper0.slideTo(6, 1000);
     mySwiper1.slideTo(6, 1000);
-    swipe3.slideTo(5,1000);
   });
   //конец
+  
+  //переключение слайдов при нажатии на стили.начало
+
+  var mySwiperFsh = document.querySelector('.swiper-fashion').swiper;
+
+  fashionOne.on('click', function () {
+    mySwiperFsh.slideTo(0, 1000);
+  });
+
+  fashionTwo.on('click', function () {
+    mySwiperFsh.slideTo(1, 1000);
+  });
+
+  fashionThree.on('click', function () {
+    mySwiperFsh.slideTo(2, 1000);
+  });
+
+  fashionFour.on('click', function () {
+    mySwiperFsh.slideTo(3, 1000);
+  });
+
+  fashionFive.on('click', function () {
+    mySwiperFsh.slideTo(4, 1000);
+  });
+
+  fashionSix.on('click', function () {
+    mySwiperFsh.slideTo(5, 1000);
+  });
+
+  fashionSeven.on('click', function () {
+    mySwiperFsh.slideTo(6, 1000);
+  });
+
+  fashionEight.on('click', function () {
+    mySwiperFsh.slideTo(7, 1000);
+  });
+
+  fashionNine.on('click', function () {
+    mySwiperFsh.slideTo(8, 1000);
+  });
+
+  fashionTen.on('click', function () {
+    mySwiperFsh.slideTo(9, 1000);
+  });
+
+  fashionEleven.on('click', function () {
+    mySwiperFsh.slideTo(10, 1000);
+  });
+
+//конец
 
 
   var next = $('.next2');
@@ -219,8 +347,37 @@ $(document).ready(function () {
     }
   });
 
-  //Валидация формы
+//checkbox
+  var flagModal = new Boolean(true); 
   
+  var checkModal = $('.modal__checkbox');
+  checkModal.on('click', function () {
+  flagModal=!flagModal;
+  });
+  
+  var flagFooter = new Boolean(true); 
+  
+  var checkFooter = $('.footer__checkbox');
+  checkFooter.on('click', function () {
+  flagFooter=!flagFooter;
+  });
+
+  var flagControl = new Boolean(true); 
+  
+  var checkControl = $('.control__checkbox');
+  checkControl.on('click', function () {
+  flagControl=!flagControl;
+  });
+
+  var flagMeasurement = new Boolean(true);
+
+  var checkMeasurement = $('.measurement__checkbox');
+  checkMeasurement.on('click', function () {
+  flagMeasurement=!flagMeasurement;
+  });
+
+
+  //Валидация формы
   $('.modal__form').validate({
     errorClass: "invalid",
     errorElement:"div",
@@ -231,7 +388,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 10
+    },
       // compound rule
       userEmail: {
         required: true,
@@ -244,7 +404,10 @@ $(document).ready(function () {
         minlength: "Имя не короче 2 букв",
         maxlength: "Имя не длиннее 15 букв"
       },
-      userPhone: "Заполните поле",
+      userPhone: {
+        required: "Заполните поле",
+        minlength: "Введите 10 цифр вашего телефона"
+      },
       userEmail: {
         required: "Заполните поле",
         email: "Введите корректный email"
@@ -252,7 +415,7 @@ $(document).ready(function () {
     },
     // 
     submitHandler: function(form) {  
-      console.log('load ajax')  
+      if(flagModal==true){
      $.ajax({
         type: "POST",
         url: "send.php",
@@ -260,10 +423,64 @@ $(document).ready(function () {
         success: function (response) {  
           console.log('кек. Ответ сервера: ' + response);
           $(form)[0].reset();
-          modal.removeClass('modal--visible'); 
-          success.toggleClass('success--visible');
+          //modal.removeClass('modal--visible'); 
+          //success.toggleClass('success--visible');
+          $(".modal__dialog").remove()
         }
       });
+    }
+    }
+  });
+
+  $('.measurement__form').validate({
+    errorClass: "invalid",
+    errorElement:"div",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        minlength: 10
+      },
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя не длиннее 15 букв"
+      },
+      userPhone: {
+        required: "Заполните поле",
+        minlength: "Введите 10 цифр вашего телефона"
+      },
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+    },
+    // 
+    submitHandler: function(form) {  
+      if(flagMeasurement==true){
+     $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {  
+          console.log('кек. Ответ сервера: ' + response);
+          $(form)[0].reset();
+          $(".measurement__dialog").remove()
+          //success.toggleClass('success--visible');
+        }
+      });
+    }
     }
   });
   
@@ -277,11 +494,12 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required",
-      // compound rule
-      userQuestion: {
+      userPhone: {
         required: true,
-        email: true
+        minlength: 10
+      },
+      userText: {
+        required: true
       }
     },
     messages: {
@@ -290,13 +508,16 @@ $(document).ready(function () {
         minlength: "Имя не короче 2 букв",
         maxlength: "Имя не длиннее 15 букв"
       },
-      userPhone: "Заполните поле",
+      userPhone: {
+        required: "Заполните поле",
+        minlength: "Введите 10 цифр вашего телефона"
+      },
       userText: {
         required: "Заполните поле",
       }
     },
     submitHandler: function(form) {  
-      console.log('load ajax')  
+      if(flagFooter==true) { 
      $.ajax({
         type: "POST",
         url: "send.php",
@@ -304,11 +525,12 @@ $(document).ready(function () {
         success: function (response) {  
           console.log('кек. Ответ сервера: ' + response);
           $(form)[0].reset();
-          modal.removeClass('modal--visible'); 
-          success.toggleClass('success--visible');
+          $(".footer__wrap").remove()
+          //modal.removeClass('modal--visible'); 
         }
       });
     }
+  }
   });
 
   $('.control__form').validate({
@@ -321,19 +543,24 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required"
-      // compound rule
-    },
+      userPhone: {
+        required: true,
+        minlength: 10
+      }
+      },
     messages: {
       userName: {
         required: "Заполните поле",
         minlength: "Имя не короче 2 букв",
         maxlength: "Имя не длиннее 15 букв"
       },  
-      userPhone: "Заполните поле"
+      userPhone: {
+        required: "Заполните поле",
+        minlength: "Введите 10 цифр вашего телефона"
+      }
     },
     submitHandler: function(form) {  
-      console.log('load ajax')  
+      if(flagControl==true) {
      $.ajax({
         type: "POST",
         url: "send.php",
@@ -341,11 +568,12 @@ $(document).ready(function () {
         success: function (response) {  
           console.log('кек. Ответ сервера: ' + response);
           $(form)[0].reset();
-          modal.removeClass('modal--visible'); 
-          success.toggleClass('success--visible');
+          $(".control__form").remove()
+          //success.toggleClass('success--visible');
         }
       });
     }
+  }
   });
 
   closeScc.on('click', function () {
@@ -357,6 +585,9 @@ $(document).ready(function () {
   });
   
   //яндекс карта
+
+
+
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
             center: [55.786786, 49.142331],
