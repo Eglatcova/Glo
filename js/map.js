@@ -12,6 +12,7 @@ function init () {
     zoom: 13,
     controls: ['zoomControl', 'fullscreenControl'] // выбираем только те функции, которые необходимы при использовании
   });
+
   var myPlacemarkTemp = new ymaps.Placemark([55.786786, 49.142331], {
       balloonContent: "Здесь может быть ваш адрес",
   }, {
@@ -27,7 +28,7 @@ function init () {
       iconImageOffset: [-25, -50],
   });
   myMapTemp.geoObjects.add(myPlacemarkTemp); // помещаем флажок на карту
- 
+ myMapTemp.behaviors.disable('scrollZoom');
   // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
   var layer = myMapTemp.layers.get(0).get(0);
  

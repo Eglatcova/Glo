@@ -87,6 +87,9 @@ function imgmin(done){
   src('img/**/**.svg')
         .pipe(dest('dist/img/'));
         done();
+  src('img/**/**.ico')
+        .pipe(dest('dist/img/'));
+        done();
 }
 
 exports.serve = bs
