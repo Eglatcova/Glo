@@ -1,13 +1,14 @@
 .button
   margin-top: 22px
   padding: 19px 28px
-  border: none
+  border: solid 1px $primary
   border-radius: 2px
   text-transform: uppercase
   font-size: 0.93rem
   outline: none
   &:hover
     cursor: pointer
+    border: solid 1px $light
   &--primary
     background-color: $primary
     color: $light
@@ -24,11 +25,21 @@
   &--call
     padding: 11px 24px
     margin-bottom: 20px
+  &--control
+    &:hover
+      border: solid 1px $secondary
+  &--send
+    &:hover
+      border: solid 1px $primary
+
     
 .label
   font-size: 1.07rem
+  color: $secondary
   &--light
-    color: rgba($light, 0.5)
+    color: rgba($secondary, 0.5)
+  &--dark
+    color: $light
 .input
   background-color: transparent
   border: none
@@ -36,7 +47,7 @@
   font-size: 1.285rem
   color: $light
   padding: 0.5rem 0
-  outline: none
+  outline: none 
   &--light
     &::placeholder
       color: $light
@@ -45,7 +56,7 @@
     opacity: 0
     visibility: hidden
     outline: none
-    &:checked +
+    &:checked ~
       .policy__label
         &::before
           background: $primary url('../img/check.svg') center no-repeat
@@ -67,8 +78,34 @@
       justify-content: center
 div
   &.invalid
+    position: absolute
+    margin-top: 4rem
     color: tomato
 input
   &.invalid
     border-bottom: 1px solid tomato
+  &.valid
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3)
+.form
+  &__label
+    color: $secondary
 
+.modal__form
+  #policyCheckbox-error
+    margin-top: 2rem
+.control__form
+  #policyCheckbox-error
+    margin-top: 2rem
+    margin-left: -4.3rem
+.measurement__form
+  .policy__label
+    margin-top: 1rem
+  #policyCheckbox-error
+    margin-top: 3.2rem
+.footer__form
+  #policyCheckbox-error
+    margin-top: 2.2rem
+    margin-left: 9.2rem
+
+
+ 

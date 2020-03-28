@@ -14,8 +14,6 @@
     height: 100%
     background-color: rgba($dark, 0.6) 
     z-index: -1
-  &__container
-    border: solid
   &__wrap
     position: absolute
     left: 0
@@ -24,7 +22,7 @@
     z-index: 1000
     max-width: 37.142rem
     height: 33rem
-    background-color: $black
+    background-color: $dark
     max-width: 63.07rem
     margin: auto
     margin-bottom: 3.714rem
@@ -106,15 +104,21 @@
     text-transform: uppercase
     color: $primary
   &__icons
-    width: 6%
+    width: 5rem
     margin: auto
     display: flex
     justify-content: space-between
+  &__icon
+    &:hover
+      border-radius: 50%
+      box-shadow: 0px -0px 7px 1px rgba($light, 0.75)
   &__telephone
     text-decoration: none
     color: $primary
     &:hover
       cursor: pointer
+      color: $light
+      
 
 
 

@@ -17,11 +17,13 @@
     if (element.target == modal)
       switchModal();
   });
-//закрытие при нажатии esc
+
+  
+ закрытие при нажатии esc
   document.onkeydown = function (evt) {
     evt = evt || window.event;
     var isEscape = false;
-    //console.log(modal.className)
+  
     if ("key" in evt) {
       isEscape = (evt.key === "Escape" || evt.key === "Esc");
     } else {
@@ -65,9 +67,32 @@ $(document).ready(function () {
   fashionTen = $('.fashion__name--ten');
   fashionEleven = $('.fashion__name--eleven');
 
-
+  function switchModal() {
+    
+    modal.removeClass('modal--visible');
+    success.removeClass('success--visible');
+  }
 
   textAnimate = $('.control__text');
+  
+  
+  $(modal).on("click", function (event) {
+    var $element = $(event.target);
+    
+    if ($element.is(modal)){
+      switchModal();
+    }
+ });
+ $(success).on("click", function (event) {
+  var $element = $(event.target);
+
+  
+  if ($element.is(success)){
+    switchModal();
+  }
+});
+
+
 
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
@@ -75,6 +100,9 @@ $(document).ready(function () {
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
+
+
+
   //кнопка вверх
   $(window).scroll(function () {
     if ($(window).scrollTop() > 1000) {
@@ -90,12 +118,29 @@ $(document).ready(function () {
   });
 
 
+
+  document.onkeydown = function (evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+        
+    if ("key" in evt) {
+      isEscape = (evt.key === "Escape" || evt.key === "Esc");
+    } else {
+      isEscape = (evt.keyCode === 27);
+    }
+
+    if (isEscape) {
+      switchModal();
+    }
+  };
   //слайдер1
   var mySwiper = new Swiper('.swiper1', {
     loop: true,
     pagination: {
       el: '.pagination1',
       type: 'bullets',
+      spaceBetween: 30,
+      
     },
     navigation: {
       nextEl: '.next1',
@@ -108,8 +153,7 @@ $(document).ready(function () {
   var bullets = $('.pagination1');
 
   next.css('left', prev.width() + 10 + bullets.width() + 10)
-  bullets.css('left', prev.width() + 10)
-  
+  bullets.css('left', prev.width() + 10);
   
  //слайдер стили
  var Myswiper = new Swiper('.swiper-fashion', {
@@ -121,7 +165,7 @@ $(document).ready(function () {
     slideChange: function () {
       //1
       if (this.realIndex == 0)          
-        fashionOne.addClass('fashion__name--visible');     
+        fashionOne.addClass('fashion__name--visible');
       else
         fashionOne.removeClass('fashion__name--visible'); 
       //2
@@ -157,6 +201,7 @@ $(document).ready(function () {
       //8
       if (this.realIndex == 7)
         fashionEight.addClass('fashion__name--visible');
+
       else
         fashionEight.removeClass('fashion__name--visible');
       //9  
@@ -193,6 +238,7 @@ $(document).ready(function () {
     pagination: {
       el: '.pagination2',
       type: 'bullets',
+      
     },
     navigation: {
       nextEl: '.next2',
@@ -390,13 +436,17 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 10
+        minlength: 16
     },
       // compound rule
       userEmail: {
         required: true,
         email: true
+      },
+      policyCheckbox:{
+        required: true
       }
+
     },
     messages: {
       userName: {
@@ -411,6 +461,9 @@ $(document).ready(function () {
       userEmail: {
         required: "Заполните поле",
         email: "Введите корректный email"
+      },
+      policyCheckbox:{
+        required: "Подтвердите согласие"
       }
     },
     // 
@@ -421,11 +474,10 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {  
-          console.log('кек. Ответ сервера: ' + response);
           $(form)[0].reset();
-          //modal.removeClass('modal--visible'); 
-          //success.toggleClass('success--visible');
-          $(".modal__dialog").remove()
+          modal.removeClass('modal--visible'); 
+          success.toggleClass('success--visible');
+          //$(".modal__dialog").remove()
         }
       });
     }
@@ -444,11 +496,14 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 10
+        minlength: 16
       },
       userEmail: {
         required: true,
         email: true
+      },
+      policyCheckbox:{
+        required: true
       }
     },
     messages: {
@@ -464,6 +519,9 @@ $(document).ready(function () {
       userEmail: {
         required: "Заполните поле",
         email: "Введите корректный email"
+      },
+      policyCheckbox:{
+        required: "Подтвердите согласие"
       }
     },
     // 
@@ -474,10 +532,9 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {  
-          console.log('кек. Ответ сервера: ' + response);
           $(form)[0].reset();
-          $(".measurement__dialog").remove()
-          //success.toggleClass('success--visible');
+          //$(".measurement__dialog").remove()
+          success.toggleClass('success--visible');
         }
       });
     }
@@ -496,9 +553,12 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 10
+        minlength: 16
       },
       userText: {
+        required: true
+      },
+      policyCheckbox:{
         required: true
       }
     },
@@ -514,6 +574,9 @@ $(document).ready(function () {
       },
       userText: {
         required: "Заполните поле",
+      },
+      policyCheckbox:{
+        required: "Подтвердите согласие"
       }
     },
     submitHandler: function(form) {  
@@ -523,10 +586,10 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {  
-          console.log('кек. Ответ сервера: ' + response);
           $(form)[0].reset();
-          $(".footer__wrap").remove()
+          //$(".footer__wrap").remove()
           //modal.removeClass('modal--visible'); 
+          success.toggleClass('success--visible');
         }
       });
     }
@@ -545,7 +608,10 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 10
+        minlength: 16
+      },
+      policyCheckbox:{
+        required: true
       }
       },
     messages: {
@@ -557,6 +623,9 @@ $(document).ready(function () {
       userPhone: {
         required: "Заполните поле",
         minlength: "Введите 10 цифр вашего телефона"
+      },
+      policyCheckbox:{
+        required: "Подтвердите согласие"
       }
     },
     submitHandler: function(form) {  
@@ -566,10 +635,11 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {  
-          console.log('кек. Ответ сервера: ' + response);
           $(form)[0].reset();
-          $(".control__form").remove()
-          //success.toggleClass('success--visible');
+          //$(".control__form").remove()
+
+          $(".control__form").removeClass('.valid');
+          success.toggleClass('success--visible');
         }
       });
     }
@@ -579,10 +649,75 @@ $(document).ready(function () {
   closeScc.on('click', function () {
     success.toggleClass('success--visible');});
 
+   /* $('phone__mask').on('click', function () {
+
+     
+    
+    });*/
+
+
   //маска для телефона
-  $('[type=tel]').mask('+7(000)00-00-000', {
-    placeholder: "+7(___)__-__-___"
+  $('[type=tel]').mask('+7(000)00-00-000' );
+
+  
+    $("#menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+
+    $("#footer__menu").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 1500);
   });
+
+  $('#low').on("click", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+});
+    /*
+var scrollLow=$('.hero__scroll-down')
+  scrollLow.on('click', function () {
+    $('html, body').animate({
+      scrollTop: 900
+    }, 1500);
+  });*/
+  //video
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: 'auto',
+      width: '100%',
+      videoId: 'MZqtJ1IrRNI',
+      events: {
+        'onReady': videoPlay
+      }
+    });
+  })
+
+  function videoPlay(event){
+    event.target.playVideo();
+  }
+
+
+
+ /* $("low").on("click", function (event) {
+   // event.preventDefault();
+  
+   // var id  = $('#menu6'),
+   //     top = $(id).offset().top;
+   $('html, body').animate({
+    scrollTop: 80000
+  }, 1500);
+    //$('body,html').animate({scrollTop: 3500}, 1500);
+});
+  */
+
   
   //яндекс карта
 

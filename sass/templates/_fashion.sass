@@ -53,15 +53,35 @@
     color: $primary
     margin-top: 5.2rem
     margin-bottom: 3.3rem
-  &__name
-    font-family: 'Futura Book'
-    font-size: 1.71rem
-    margin-bottom: 1.57rem
+  &__wrap
+    display: flex
+    flex-direction: column
+.name
+  &__wrap
+    text-decoration: none
+    background-image: linear-gradient(currentColor, currentColor)
+    background-position: 0% 100%
+    background-repeat: no-repeat
+    background-size: 0% 2px
+    transition: background-size .3s
     &:hover
+      background-size: 62% 2px
       cursor: pointer
-    &--visible
       color: $primary
       &:hover
         cursor: pointer
-
-  
+      background-size: 62% 2px
+.fashion
+  &__name
+    display: inline
+    width: auto
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 1.51rem
+    margin-bottom: 1.78rem
+    &--visible
+      color: $primary
+      text-decoration: none
+      background-image: linear-gradient(currentColor, currentColor)
+      background-position: 0% 100%
+      background-repeat: no-repeat
+      background-size: 62% 2px

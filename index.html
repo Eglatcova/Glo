@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
@@ -13,16 +14,16 @@
   type="text/javascript">
   </script>-->
   <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
-  <title>Document</title>
+  <title>REPAIR DESIGN PROJECT</title>
 </head>
 
 <body>
-  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(61263049, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/61263049" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  <!-- Yandex.Metrika counter --> <script > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(61263049, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/61263049" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <header class="header">
     <div class="container">
       <div class="menu">
-        <div class="logo menu__logo">Repair Design Project</div>
-        <nav class="nav menu__nav">
+        <div class="logo menu__logo"><a href="http://testdomk.ru/repair-design/" class="logo menu__logo">Repair Design Project</a></div>
+        <nav class="nav menu__nav" id="menu">
           <a href="#menu1" class="nav__item">Главная</a>
           <a href="#menu2" class="nav__item">Пpоекты</a>
           <a href="#menu3" class="nav__item">Замер</a>
@@ -43,31 +44,31 @@
       <div class="instagram hero__instagram">
         <a href="#" class="instagram__link">Instagram</a>
       </div>
-      <div class="container">
+      <div class="container hero__container">
         <div class="hero__content">
-          <h1 class="title hero__title">Турецкий ремонт в<span class="title--primary"><br>Ростове-на-дону</span></h1>
+          <h1 class="title hero__title">Турецкий ремонт <br>в <span class="title--primary">Ростове-на-дону</span></h1>
           <p class="hero__text">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от
             стоимости материалов за счет организации работы</p>
           <button class="button hero__button button--primary wow zoomIn" data-wow-delay="0.5s"
             data-toggle="modal">Рассчитать стоимость</button>
-          <button class="button hero__button button--outline wow zoomIn" data-wow-delay="1.5s"> Отправить
+          <button class="button hero__button button--outline wow zoomIn button--send" data-wow-delay="1.5s" data-toggle="modal"> Отправить
             заявку</button>
         </div>
       </div>
-      <a href="#" class="hero__scroll-down wow pulse" data-wow-duration="1.5s" data-wow-delay="3s"
+      <a href="#menu2" id="low" class="hero__scroll-down wow pulse" data-wow-duration="1.5s" data-wow-delay="3s"
         data-wow-iteration="2">листайте вниз</a>
     </section>
     <section class="section projects section--dark" id="menu2">
       <div class="container">
         <div class="row">
-          <div class="col-50 wow fadeInLeft" data-wow-offset="200">
+          <div class="col-41 wow fadeInLeft" data-wow-offset="200">
             <div class="section-title section-title--left">
-              <h2 class="section-title__heading section-title__heading--primary">Завершенные <span
-                  class="section-title__word">проекты</span></h2>
+              <h2 class="section-title__heading section-title__heading--primary projects__title">Завершенные <span
+                  class="section-title__word projects__title">проекты</span></h2>
               <p class="section-title__text projects__text">На сайте представлена ​​лишь небольшая часть работ,
                 выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
             </div>
-            <div class="swiper-container swiper1 swiper-no-swiping">
+            <div class="swiper-container swiper1 swiper-no-swiping projects__swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="swiper-slide__text">
@@ -78,11 +79,11 @@
                     <h3 class="swiper-slide__heading">Площадь:</h3>
                     <span class="swiper-slide__value">81 м<sup>2</sup></span>
                   </div>
-                  <div class="swiper-slide__text">
+                  <div class="swiper-slide__text swiper-slide__text--low">
                     <h3 class="swiper-slide__heading">Срок ремонта:</h3>
                     <span class="swiper-slide__value">3,5 месяца</span>
                   </div>
-                  <div class="swiper-slide__text">
+                  <div class="swiper-slide__text swiper-slide__text--low">
                     <h3 class="swiper-slide__heading">Стоимость:</h3>
                     <span class="swiper-slide__value">По запросу</span>
                   </div>
@@ -129,11 +130,11 @@
               <div class="swiper-button-next next1"></div>
             </div>
           </div>
-          <div class="col-50 wow fadeInRight" data-wow-offset="200">
-            <div class="swiper-container swiper1 swiper-no-swiping">
+          <div class="col-51 wow fadeInRight" data-wow-offset="200">
+            <div class="swiper-container swiper1 swiper-no-swiping swiper-zbl ">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="img/project.jpg" alt="">
+                  <img src="img/project.jpg" alt="" class="projects__img">
                 </div>
                 <div class="swiper-slide">
                   <img src="img/project.jpg" alt="">
@@ -150,12 +151,13 @@
     <section class="section control">
       <div class="container">
         <div class="section-title control__section-title section-title--light">
-          <h2 class="section-title__heading">Онлайн контроль</h2>
+          <h2 class="section-title__heading control__heading">Онлайн контроль</h2>
           <div class="section-title__image">
             <img src="img/video.svg" class="wow rotateIn" data-wow-offset="200" alt="">
           </div>
         </div>
-        <div class="control__video">
+        <div class="control__video video" id="player">
+          <script src="https://www.youtube.com/iframe_api"></script>
           <img src="img/play-icon.svg" alt="play icon" class="video__play">
         </div>
         <p class="control__text"> На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В
@@ -174,15 +176,15 @@
               placeholder="Как вас зовут:">
           </div>
           <div class="control__input-group">
-            <label for="user-form-control" class="label form__label control__label label--dark">Телефон</label>
-            <input type="tel" name="userPhone" class="input form__input control__input" id="user-form-control"
+            <label for="user-form-control" class="label form__label control__label label--dark wtf">Телефон</label> 
+            <input type="tel" name="userPhone" class="input form__input control__input phone__mask" id="user-form-control"
               placeholder="Ваш номер телефона:">
           </div>
-          <button class="button button--primary control__button">Отправить</button>
+          <button class="button button--primary control__button button--control wtf">Отправить</button>
           <div class="policy control__policy">
-            <input type="checkbox" name="policy-checkbox" id="policy-checkbox-control"
+            <input type="checkbox" name="policyCheckbox"  id="policy-checkbox-control"
               class="policy__checkbox control__checkbox" checked>
-            <label for="policy-checkbox-control" class="policy__label">я соглашаюсь с обработкой данных</label>
+            <label for="policy-checkbox-control" class="policy__label control__label control__agree">я соглашаюсь с обработкой данных</label>
           </div>
         </form>
       </div>
@@ -199,7 +201,7 @@
           <div class="col-30">
             <div class="card types__card">
               <img src="img/type-1.jpg" alt="Косметический ремонт" class="card__image">
-              <div class="card__text wow fadeInDown" data-wow-delay="0.5s">
+              <div class="card__text card__text--upper wow fadeInDown" data-wow-delay="0.5s">
                 <h3 class="card__title">Косметический ремонт</h3>
                 <ul class="card__list">
                   <li class="card__item">Демонтаж старых покрытий</li>
@@ -219,7 +221,7 @@
           <div class="col-30">
             <div class="card types__card">
               <img src="img/type-2.jpg" alt="Капитальный ремонт" class="card__image">
-              <div class="card__text wow fadeInDown" data-wow-delay="1s">
+              <div class="card__text card__text--upper  wow fadeInDown" data-wow-delay="1s">
                 <h3 class="card__title">Капитальный ремонт</h3>
                 <ul class="card__list">
                   <li class="card__item">Демонтаж старых покрытий</li>
@@ -239,7 +241,7 @@
           <div class="col-30">
             <div class="card types__card">
               <img src="img/type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
-              <div class="card__text wow fadeInDown" data-wow-delay="1.5s">
+              <div class="card__text card__text--upper  wow fadeInDown" data-wow-delay="1.5s">
                 <h3 class="card__title">Дизайнерский ремонт</h3>
                 <ul class="card__list">
                   <li class="card__item">Демонтаж старых покрытий</li>
@@ -311,7 +313,7 @@
                       id="user-email-measurement" placeholder="Ваш email:">
                   </div>
                   <div class="policy measurement__policy">
-                    <input type="checkbox" name="policy-checkbox" id="policy-checkbox-measurement"
+                    <input type="checkbox" name="policyCheckbox"  id="policy-checkbox-measurement"
                       class="measurement__checkbox policy__checkbox" checked>
                     <label for="policy-checkbox-measurement" class="policy__label">я соглашаюсь с обработкой
                       данных</label>
@@ -333,17 +335,19 @@
         <div class="row fashion__row">
           <div class="col-31">
             <h3 class="fashion__title">Мы реализуем ваши <br>самые смелые фантазии</h3>
-            <div class="fashion__name fashion__name--one fashion__name--visible">Американская классика</div>
-            <div class="fashion__name fashion__name--two">Имперский стиль</div>
-            <div class="fashion__name fashion__name--three">Классика</div>
-            <div class="fashion__name fashion__name--four">Лофт</div>
-            <div class="fashion__name fashion__name--five">Минимализм</div>
-            <div class="fashion__name fashion__name--six">Прованс</div>
-            <div class="fashion__name fashion__name--seven">Романтизм</div>
-            <div class="fashion__name fashion__name--eight">Скандинавский стиль</div>
-            <div class="fashion__name fashion__name--nine">Средиземноморский стиль</div>
-            <div class="fashion__name fashion__name--ten">Хайтек</div>
-            <div class="fashion__name fashion__name--eleven">Эклектизм</div>
+            <div class="fashion__wrap">
+             <div  class="fashion__name"><span class="name__wrap fashion__name--one fashion__name--visible">Американская классика</span></div> 
+            <div class="fashion__name"><span class="name__wrap fashion__name--two">Имперский стиль</span></div>
+            <div class="fashion__name"><span class="name__wrap fashion__name--three">Классика</span></div>
+            <div class="fashion__name"><span class="name__wrap fashion__name--four">Лофт</span></div>
+            <div class="fashion__name"><span class="name__wrap fashion__name--five">Минимализм</span></div>
+            <div class="fashion__name"><span class="name__wrap fashion__name--six">Прованс</span></div>
+            <div class="fashion__name"><span class="name__wrap fashion__name--seven">Романтизм</span></div>
+            <div class="fashion__name"><span class="name__wrap fashion__name--eight">Скандинавский стиль</span></div>
+            <div class="fashion__name"><span class="name__wrap fashion__name--nine">Средиземноморский стиль</span></div>
+            <div class="fashion__name"><span class="name__wrap fashion__name--ten">Хайтек</span></div>
+            <div class="fashion__name"><span class="name__wrap fashion__name--eleven">Эклектизм</span></div>
+            </div>
           </div>
           <div class="col-69">
             <div class=" swiper-container swiper-fashion">
@@ -360,15 +364,42 @@
                   <img src="img/fashion/imperial-3.jpg" alt="" class="fashion__image--three">
                   <img src="img/fashion/imperial-4.jpg" alt="" class="fashion__image--four">
                 </div>
-                <div class="swiper-slide">3</div>
-                <div class="swiper-slide">4</div>
-                <div class="swiper-slide">5</div>
-                <div class="swiper-slide">6</div>
-                <div class="swiper-slide">7</div>
-                <div class="swiper-slide">8</div>
-                <div class="swiper-slide">9</div>
-                <div class="swiper-slide">10</div>
-                <div class="swiper-slide">11</div>
+                <div class="swiper-slide"><img src="img/fashion/imperial-1.jpg" alt="" class="fashion__image--one">
+                  <img src="img/fashion/imperial-2.jpg" alt="" class="fashion__image--two">
+                  <img src="img/fashion/imperial-3.jpg" alt="" class="fashion__image--three">
+                  <img src="img/fashion/imperial-4.jpg" alt="" class="fashion__image--four"></div>
+                <div class="swiper-slide"><img src="img/fashion/imperial-1.jpg" alt="" class="fashion__image--one">
+                  <img src="img/fashion/imperial-2.jpg" alt="" class="fashion__image--two">
+                  <img src="img/fashion/imperial-3.jpg" alt="" class="fashion__image--three">
+                  <img src="img/fashion/imperial-4.jpg" alt="" class="fashion__image--four"></div>
+                <div class="swiper-slide"><img src="img/fashion/imperial-1.jpg" alt="" class="fashion__image--one">
+                  <img src="img/fashion/imperial-2.jpg" alt="" class="fashion__image--two">
+                  <img src="img/fashion/imperial-3.jpg" alt="" class="fashion__image--three">
+                  <img src="img/fashion/imperial-4.jpg" alt="" class="fashion__image--four"></div>
+                <div class="swiper-slide"><img src="img/fashion/imperial-1.jpg" alt="" class="fashion__image--one">
+                  <img src="img/fashion/imperial-2.jpg" alt="" class="fashion__image--two">
+                  <img src="img/fashion/imperial-3.jpg" alt="" class="fashion__image--three">
+                  <img src="img/fashion/imperial-4.jpg" alt="" class="fashion__image--four"></div>
+                <div class="swiper-slide"><img src="img/fashion/imperial-1.jpg" alt="" class="fashion__image--one">
+                  <img src="img/fashion/imperial-2.jpg" alt="" class="fashion__image--two">
+                  <img src="img/fashion/imperial-3.jpg" alt="" class="fashion__image--three">
+                  <img src="img/fashion/imperial-4.jpg" alt="" class="fashion__image--four"></div>
+                <div class="swiper-slide"><img src="img/fashion/imperial-1.jpg" alt="" class="fashion__image--one">
+                  <img src="img/fashion/imperial-2.jpg" alt="" class="fashion__image--two">
+                  <img src="img/fashion/imperial-3.jpg" alt="" class="fashion__image--three">
+                  <img src="img/fashion/imperial-4.jpg" alt="" class="fashion__image--four"></div>
+                <div class="swiper-slide"><img src="img/fashion/imperial-1.jpg" alt="" class="fashion__image--one">
+                  <img src="img/fashion/imperial-2.jpg" alt="" class="fashion__image--two">
+                  <img src="img/fashion/imperial-3.jpg" alt="" class="fashion__image--three">
+                  <img src="img/fashion/imperial-4.jpg" alt="" class="fashion__image--four"></div>
+                <div class="swiper-slide"><img src="img/fashion/imperial-1.jpg" alt="" class="fashion__image--one">
+                  <img src="img/fashion/imperial-2.jpg" alt="" class="fashion__image--two">
+                  <img src="img/fashion/imperial-3.jpg" alt="" class="fashion__image--three">
+                  <img src="img/fashion/imperial-4.jpg" alt="" class="fashion__image--four"></div>
+                <div class="swiper-slide"><img src="img/fashion/imperial-1.jpg" alt="" class="fashion__image--one">
+                  <img src="img/fashion/imperial-2.jpg" alt="" class="fashion__image--two">
+                  <img src="img/fashion/imperial-3.jpg" alt="" class="fashion__image--three">
+                  <img src="img/fashion/imperial-4.jpg" alt="" class="fashion__image--four"></div>
 
               </div>
             </div>
@@ -385,17 +416,17 @@
               <img src="img/fashion-mobile-1.jpg" alt="" class="fashion__image--one">
             </div>
             <div class="swiper-slide fashion__slide">
-              <img src="img/fashion-mobile-1.jpg" alt="" class="fashion__image--one">
+              <img src="img/fashion-mobile-2.jpg" alt="" class="fashion__image--one">
             </div>
-            <div class="swiper-slide">3</div>
-            <div class="swiper-slide">4</div>
-            <div class="swiper-slide">5</div>
-            <div class="swiper-slide">6</div>
-            <div class="swiper-slide">7</div>
-            <div class="swiper-slide">8</div>
-            <div class="swiper-slide">9</div>
-            <div class="swiper-slide">10</div>
-            <div class="swiper-slide">11</div>
+            <div class="swiper-slide"><img src="img/fashion-mobile-3.jpg" alt="" class="fashion__image--one"></div>
+            <div class="swiper-slide"><img src="img/fashion-mobile-1.jpg" alt="" class="fashion__image--one"></div>
+            <div class="swiper-slide"><img src="img/fashion-mobile-1.jpg" alt="" class="fashion__image--one"></div>
+            <div class="swiper-slide"><img src="img/fashion-mobile-1.jpg" alt="" class="fashion__image--one"></div>
+            <div class="swiper-slide"><img src="img/fashion-mobile-1.jpg" alt="" class="fashion__image--one"></div>
+            <div class="swiper-slide"><img src="img/fashion-mobile-1.jpg" alt="" class="fashion__image--one"></div>
+            <div class="swiper-slide"><img src="img/fashion-mobile-1.jpg" alt="" class="fashion__image--one"></div>
+            <div class="swiper-slide"><img src="img/fashion-mobile-1.jpg" alt="" class="fashion__image--one"></div>
+            <div class="swiper-slide"><img src="img/fashion-mobile-1.jpg" alt="" class="fashion__image--one"></div>
           </div>
         </div>
         <div class="prev-fashion"></div>
@@ -516,11 +547,76 @@
                       ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов. </p>
                   </div>
                 </div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
+                <div class="swiper-slide">
+                  <div class="steps-slide__text">
+                    <h3 class="steps-slide__heading">Выезд на замеры <br>помещения</h3>
+                    <p class="steps-slide__value">После вашего звонка мы идем к вам, чтобы
+                      проконсультироваться и
+                      измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые
+                      вопросы,
+                      касаемо ремонта.</p>
+                    <p class="steps-slide__value steps-slide__value--lower">
+                      Оценщик приходит, чтобы измерить комнату.  Он проконсультирует вас по вопросам
+                      техники
+                      ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов. </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="steps-slide__text">
+                    <h3 class="steps-slide__heading">Выезд на замеры <br>помещения</h3>
+                    <p class="steps-slide__value">После вашего звонка мы идем к вам, чтобы
+                      проконсультироваться и
+                      измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые
+                      вопросы,
+                      касаемо ремонта.</p>
+                    <p class="steps-slide__value steps-slide__value--lower">
+                      Оценщик приходит, чтобы измерить комнату.  Он проконсультирует вас по вопросам
+                      техники
+                      ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов. </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="steps-slide__text">
+                    <h3 class="steps-slide__heading">Выезд на замеры <br>помещения</h3>
+                    <p class="steps-slide__value">После вашего звонка мы идем к вам, чтобы
+                      проконсультироваться и
+                      измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые
+                      вопросы,
+                      касаемо ремонта.</p>
+                    <p class="steps-slide__value steps-slide__value--lower">
+                      Оценщик приходит, чтобы измерить комнату.  Он проконсультирует вас по вопросам
+                      техники
+                      ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов. </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="steps-slide__text">
+                    <h3 class="steps-slide__heading">Выезд на замеры <br>помещения</h3>
+                    <p class="steps-slide__value">После вашего звонка мы идем к вам, чтобы
+                      проконсультироваться и
+                      измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые
+                      вопросы,
+                      касаемо ремонта.</p>
+                    <p class="steps-slide__value steps-slide__value--lower">
+                      Оценщик приходит, чтобы измерить комнату.  Он проконсультирует вас по вопросам
+                      техники
+                      ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов. </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="steps-slide__text">
+                    <h3 class="steps-slide__heading">Выезд на замеры <br>помещения</h3>
+                    <p class="steps-slide__value">После вашего звонка мы идем к вам, чтобы
+                      проконсультироваться и
+                      измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые
+                      вопросы,
+                      касаемо ремонта.</p>
+                    <p class="steps-slide__value steps-slide__value--lower">
+                      Оценщик приходит, чтобы измерить комнату.  Он проконсультирует вас по вопросам
+                      техники
+                      ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов. </p>
+                  </div>
+                </div>
               </div>
               <div class="swiper-button-prev prev2 prev100"></div>
               <div class="swiper-pagination pagination2"></div>
@@ -588,20 +684,20 @@
       </div>
     </section>
     <div class="section team" id="menu4">
-      <div class="container">
+      <div class="container team__container">
         <div class="section-title team__section-title">
-          <h2 class="section-title__heading section-title__heading--light">Наша команда</h2>
+          <h2 class="section-title__heading section-title__heading--light team__title">Наша команда</h2>
           <div class="section-title__image">
-            <img src="img/team.svg" class="wow rotateIn" data-wow-offset="400" alt="">
+            <img src="img/team.svg" class="wow rotateIn team__icon" data-wow-offset="400" alt="">
           </div>
           <div class="section-title__text team__text team__text--upper">
             Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться
           </div>
         </div>
-        <div class="row row--photo">
-          <div class="col-30">
-            <div class="photo team__photo team__photo">
-              <img src="img/photo1.jpg" alt="">
+        <div class="row team__row row--photo">
+          <div class="col-30 photo__col">
+            <div class="photo team__photo team__photo team__photo--one">
+              <img src="img/photo1.jpg" alt="" class="photo__img">
               <div class="photo-icon">
                 <img src="img/photo-icon1.svg" alt="">
               </div>
@@ -618,10 +714,10 @@
             </div>
 
           </div>
-          <div class="col-30">
+          <div class="col-30 photo__col">
 
             <div class="photo team__photo">
-              <img src="img/photo2.jpg" alt="">
+              <img src="img/photo2.jpg" alt="" class="photo__img">
               <div class="photo-icon">
                 <img src="img/photo-icon2.png" alt="">
               </div>
@@ -638,9 +734,9 @@
             </div>
 
           </div>
-          <div class="col-30">
+          <div class="col-30 photo__col">
             <div class="photo team__photo">
-              <img src="img/photo3.jpg" alt="">
+              <img src="img/photo3.jpg" alt="" class="photo__img">
               <div class="photo-icon">
                 <img src="img/photo-icon3.svg" alt="">
               </div>
@@ -659,7 +755,7 @@
           </div>
         </div>
         <div class="team__element"></div>
-        <div class="team__text">Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом
+        <div class="team__text team__text--lower">Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом
           работы от 6 лет. У нас нет гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его
           специальности.</div>
       </div>
@@ -768,50 +864,44 @@
     </div>
   </main>
   <footer class="footer section--dark">
-    <div class="container">
+    <div class="container footer__container">
       <div class="footer__form-wrap">
         <div class="footer__wrap">
           <h3 class="footer__title">Остались вопросы?</h3>
           <form action="send.php" method="POST" class="form footer__form">
             <div class="messageBox3" id="messageBox3"></div>
             <div class="input-group footer__input-group">
-              <label for="user-name-footer" class="label form__label label--light">Имя</label>
+              <label for="user-name-footer" class="label form__label label--light footer__label">Имя</label>
               <input type="text" name="userName" class="input form__input footer__input input--light"
                 id="user-name-footer" placeholder="Как вас зовут:">
             </div>
             <div class="input-group footer__input-group">
-              <label for="user-form-footer" class="label form__label label--light">Телефон</label>
+              <label for="user-form-footer" class="label form__label label--light footer__label">Телефон</label>
               <input type="tel" name="userPhone" class="input form__input footer__input input--light"
                 id="user-form-footer" placeholder="Ваш номер телефона:">
             </div>
             <div class="input-group footer__input-group footer__input-group--full-width">
-              <label for="user-question" class="label form__label label--light">Вопрос</label>
-              <input type="text" name="userText" class="input form__input footer__input--question input--light"
+              <label for="user-question" class="label form__label label--light footer__label">Вопрос</label>
+              <input type="text" name="userText" class="input form__input footer__input--question footer__input input--light"
                 id="user-question" placeholder="Я хочу спросить">
             </div>
             <div class="policy footer__policy">
-              <input type="checkbox" name="policy-checkbox" id="policy-checkbox-footer"
+              <input type="checkbox" name="policyCheckbox"  id="policy-checkbox-footer"
                 class="policy__checkbox footer__checkbox" checked>
-              <label for="policy-checkbox-footer" class="policy__label policy__label--center">я соглашаюсь с обработкой
+              <label for="policy-checkbox-footer" class="policy__label footer__agree policy__label--center">я соглашаюсь на обработку
                 данных</label>
             </div>
             <button class="button button--primary footer__button" data-toggle="footer">Отправить</button>
           </form>
         </div>
-        <div class="footer__sent">
-          <div class="sent__text">Спасибо за заявку! <br>Мы Вконтакте:</div>
-          <div class="sent__vk">
-            <a href="https://vk.com/glo_academy"><img src="img/vk.png" alt="vk"></a>
-          </div>
-        </div>
       </div>
       <div class="footer__contacts" id="menu6">
         <div class="footer__text">
-          Ростов на дону, Торговый центр Plaza<br> Прямой телефон <a href="tel:+79997683299" class="footer__telephone">+7 (999) 768 32 99</a>
+          Ростов на дону, Торговый<span> центр Plaza <br class="footer__br">Прямой телефон </span><a href="tel:+79997683299" class="footer__telephone">+7 (999) 768 32 99</a>
         </div>
         <div class="footer__icons">
-          <img src="img/footer_icon1.png" alt="">
-          <img src="img/footer_icon2.png" alt="">
+          <a href="mailto:e.glatcova@yandex.ru"><img src="img/footer1.svg" alt="" class="footer__icon"></a>
+          <a href="https://www.instagram.com/?hl=ru"><img src="img/footer2.svg" alt="" class="footer__icon"></a>
         </div>
       </div>
       <div class="map footer__map" id="map"> 
@@ -825,13 +915,13 @@
       <div class="container">
         <div class="menu">
           <div class="logo menu__logo">Repair Design Project</div>
-          <nav class="nav menu__nav">
-            <a href="#" class="nav__item">Главная</a>
-            <a href="#" class="nav__item">Пpоекты</a>
-            <a href="#" class="nav__item">Замер</a>
-            <a href="#" class="nav__item">Команда</a>
-            <a href="#" class="nav__item">Отзывы</a>
-            <a href="#" class="nav__item">Контакты</a>
+          <nav class="nav menu__nav" id="footer__menu">
+            <a href="#menu1" class="nav__item">Главная</a>
+            <a href="#menu2" class="nav__item">Пpоекты</a>
+            <a href="#menu3" class="nav__item">Замер</a>
+            <a href="#menu4" class="nav__item">Команда</a>
+            <a href="#menu5" class="nav__item">Отзывы</a>
+            <a href="#menu6" class="nav__item">Контакты</a>
           </nav>
           <div class="contacts menu__contacts">
             <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
@@ -844,13 +934,6 @@
   </footer>
  
   <div class="modal">
-    <div class="modal__sent">
-      <button class="modal__close"></button>
-      <div class="sent__text">Спасибо за заявку! <br>Мы Вконтакте:</div>
-      <div class="sent__vk">
-        <a href="https://vk.com/glo_academy"><img src="img/vk.png" alt="vk"></a>
-      </div>
-    </div>
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
@@ -871,7 +954,7 @@
             placeholder="Ваш email:">
         </div>
         <div class="policy modal__policy">
-          <input type="checkbox" name="policy-checkbox" id="policy-checkbox-modal"
+          <input type="checkbox" name="policyCheckbox" id="policy-checkbox-modal"
             class="modal__checkbox policy__checkbox" checked>
           <label for="policy-checkbox-modal" class="policy__label">я соглашаюсь с обработкой данных</label>
         </div>
@@ -882,7 +965,7 @@
   <div class="success">
     <div class="success__dialog">
       <button class="success__close"></button>
-      <h3 class="modal__title">Заявка успешно отправлена</h3>
+      <h3 class="modal__title success__title">Заявка успешно отправлена</h3>
     </div>
   </div>
   <a class="scroll-button"></a>
